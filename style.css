@@ -7,7 +7,8 @@ body {
 }
 
 header {
-    background-color: #f4e2d4; /* Бежевый для шапки */
+    margin: -30px 0px 0px 0px;
+     /* Бежевый для шапки */
     padding: 10px;
     text-align: center;
 }
@@ -24,15 +25,17 @@ header {
 /* Навигация */
 .navigation {
     list-style: none;
-    padding: 0;
+    padding: 10px 10px 0px 10px;
     margin: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
+    background-color: #ffcc99c6;
 }
 
 .navigation li {
     display: inline;
+     position: relative;
 }
 
 .navigation a {
@@ -42,10 +45,24 @@ header {
     padding: 5px 10px;
     border-radius: 5px;
     transition: background-color 0.3s;
+    position: relative;
+
 }
 
-.navigation a:hover {
-    background-color: #e2c2a1; /* Более тёмный бежевый */
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Расположить полоску под элементом */
+    width: 0;      /* Начальная ширина */
+    height: 4px;   /* Высота полоски */
+    background-color: #e2c2a1; /* Цвет полоски */
+    transition: width 0.3s ease, left 0.3s ease; /* Анимация ширины и смещения */
+
+}
+.navigation a:hover::after {
+    width: 100%;   /* При наведении устанавливаем ширину */
+    left: 0;       /* Сдвигаем полоску к левому краю */
 }
 
 /* Основной контент */
@@ -66,8 +83,27 @@ main {
     border-radius: 8px;
 }
 
-h2 {
-    color: #444;
+h1 {
+   text-align: center ;
+   
+   padding:20px 10px 10px 10px;
+  
+}
+
+#name {
+     font-family: Arial, sans-serif;
+   font-size: 48px;
+    text-align: center;
+   color: #333; /* Темно-синий цвет */
+    margin: 10px 0;
+}
+
+#title {
+     font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #333; /* Более светлый оттенок синего */
+    margin-bottom: 0px;
 }
 
 /* Code sample section */
@@ -87,8 +123,8 @@ footer {
     margin-top: 20px;
 }
 body {
-    margin: 0;
-    padding: 0;
+    margin: 20px 200px 0px 200px;
+    padding: 0px;
     font-family: 'Arial', sans-serif;
     color: #333;
 }
@@ -97,7 +133,7 @@ body {
     display: flex;
     width: 100%;
     height: 100vh;
-    background-color: #257346; /* Бежевый фон */
+    background-color: #ffcc99; /* Бежевый фон */
 }
 
 /* Левая панель */
@@ -108,15 +144,19 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
+    margin: 20px 20px 20px 20px;
 }
+.Education{
+    margin: -20px 0px 10px 0px;
 
+}
 .sidebar img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
     border: 4px solid #ffcc99;
     margin-bottom: 20px;
@@ -137,14 +177,14 @@ body {
 
 /* Основная часть */
 .main-content {
-    width: 65%;
+    width: 70%;
     padding: 40px;
     background-color: #fff;
 }
 
 .name-and-title {
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .name-and-title h1 {
@@ -154,8 +194,9 @@ body {
 }
 
 .name-and-title p {
-    font-size: 18px;
-    color: #ffcc99;
+  
+    font-size: 10px;
+    color: #493724;
     font-weight: bold;
 }
 
@@ -190,4 +231,38 @@ ul li p {
     margin: 5px 0 0;
     line-height: 1.6;
     color: #555;
+}
+
+.footer-items{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+      justify-content: space-around;
+}
+.logo_rs{
+   
+    width: 70px;
+    height: 40px;
+}
+.footer_year{
+   
+    font-size: 25px;
+    margin: 0;
+}
+.footer-link{
+    
+font-size: 25px;
+  text-decoration: none;
+  color: #000000;
+   transition: 0.3s;
+   cursor: pointer;
+     font-weight: 500;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }

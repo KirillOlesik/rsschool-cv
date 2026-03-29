@@ -11,75 +11,104 @@
         <!-- Левая панель -->
         <aside class="sidebar">
             <div class="profile-picture">
-                <img src="" alt="Profile Picture">
+                <img src="/rsschool-cv/img/photo_2025-10-16_02-05-00.jpg" alt="Profile Picture">
             </div>
             <section class="about">
-                <h2>About Me</h2>
-                <p>
-                    I'm a front-end developer with an interest in web design and full-stack development.
-                    I love creating websites and applications, constantly learning and experimenting.
-                </p>
+                <h2>Language</h2>
+                <p>Russian - Native</p>
+                <p>English - intermediate</p>
             </section>
-            <section class="awards">
-                <h2>Award</h2>
-                <p><strong>Best Freelancer</strong> (2020-2021)</p>
-                <p><strong>Best Employee</strong> (2022)</p>
+            <section class="Education">
+                <h2>Education</h2>
+                <p><strong>Polessu</strong> </p>
+                <p><strong>RS School</strong> </p>
             </section>
             <section class="contact">
                 <h2>Contact</h2>
-                <p>📍 Address: 123 Main Street</p>
-                <p>📞 Phone: +7 999 123-45-67</p>
-                <p>📧 Email: dmitry@test.com</p>
+                <ul>
+                <li>Address: Belarus, Pinsk</li>
+                <li>Phone: +375(29)532-87-41</li>
+                <li>Email: olesik.kirusha@gmail.com</li>
+                <li>Git: Kirusha999</li>
+                <li>Discord: kirusha3792</li>
+                </ul>
             </section>
         </aside>
 
         <!-- Основная часть -->
         <main class="main-content">
             <header class="name-and-title">
-                 <nav>
-            <ul class="navigation">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#languages">Languages</a></li>
-                <li><a href="#code-sample">Code Sample</a></li>
-            </ul>
-        </nav>
-                <h1>Kirill Olesik</h1>
-                <p>Front-End Developer</p>
+                 <nav  >
+                    <ul class="navigation" >
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#language">Languages</a></li>
+                        <li><a href="#code-sample">Code Sample</a></li>
+                    </ul>
+                </nav>
+                <h1 id="name">Kirill Olesik</h1>
+                <p id="title">Front-End Developer</p>
             </header>
 
-            <section class="experience">
-                <h2>Experience</h2>
-                <ul>
-                    <li>
-                        <strong>Frontend Developer</strong> (2021 - Present)
-                        <p>Developed and maintained client-side applications with React and Vanilla JS. Collaborated with designers and backend developers.</p>
-                    </li>
-                    <li>
-                        <strong>Intern Developer</strong> (2019 - 2021)
-                        <p>Worked on small web application projects during university courses.</p>
-                    </li>
-                </ul>
+             <section class="language">
+                <h2>About Me</h2>
+                <p>
+                    I am a beginner front-end developer with a strong interest in web design and full-stack development. 
+                    I love creating user-friendly websites and applications, constantly learning new technologies and experimenting
+                     with design and functionality. My goal is to blend aesthetics and usability, ensuring that my work not only meets
+                      client needs but also provides an engaging experience for users.
+
+                </p>
             </section>
 
-            <section class="education">
-                <h2>Education</h2>
-                <p><strong>Bachelor's Degree in Computer Science</strong> (2021)</p>
-                <p>University of Programming</p>
+            <section class="Code exapmle">
+                <h2>Code exapmle</h2>
+                <pre><code style="font-size: 15px" >
+const factorial = (function() {
+    return function(n) {
+        if (n === 0 || n === 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    };
+})();
+
+console.log(factorial(5));  
+                
+                </code>
+                </pre>
             </section>
+
+           
             
             <section class="skills">
                 <h2>Skills</h2>
                 <ul>
                     <li>HTML & CSS</li>
-                    <li>JavaScript (ES6+)</li>
+                    <li>JavaScript</li>
                     <li>React.js</li>
                     <li>Git & GitHub</li>
                     <li>UI/UX Design</li>
                 </ul>
             </section>
+            <section class="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li><a href="https://github.com/KirillOlesik">This</a></li>
+                </ul> 
+                </section>
         </main>
     </div>
+     <footer>
+            <section class="footer">
+                <h2 class="visually-hidden">Footer section</h2>
+                <div class="footer-items">
+                     <a href="https://github.com/KirillOlesik" class="footer-link" target="_blank">GitHub</a>
+                     <p class="footer_year">2026</p>
+                     <a href="https://rs.school/ru/courses/javascript-preschool-ru" target="_blank"><img src="img/rs-school-logo.svg" alt="logo" class="logo_rs"></a>
+                </div>
+            </section>
+    </footer>
 </body>
 </html>
