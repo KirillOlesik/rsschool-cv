@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fdf5e6; /* Светлый бежевый */
+    color: #333;
+}
+
+header {
+    background-color: #f4e2d4; /* Бежевый для шапки */
+    padding: 10px;
+    text-align: center;
+}
+
+.navagation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navagation li {
+    list-style: none;
+    padding: 0;
+}
+/* Навигация */
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navigation li {
+    display: inline;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+    background-color: #e2c2a1; /* Более тёмный бежевый */
+}
+
+/* Основной контент */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.column {
+    flex: 1 1 calc(50% - 40px); /* Два столбца с отступами */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    color: #444;
+}
+
+/* Code sample section */
+.code-sample {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f9f2ec; /* Светло-бежевый */
+    border-left: 4px solid #e2c2a1;
+    padding: 10px;
+    white-space: pre-wrap;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    background-color: #f4e2d4;
+    padding: 10px;
+    margin-top: 20px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #257346; /* Бежевый фон */
+}
+
+/* Левая панель */
+.sidebar {
+    background-color: #2c2c2c; /* Тёмная панель слева */
+    color: #fff;
+    width: 35%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+
+.sidebar img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #ffcc99;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #ffcc99; /* Бежевый акцент */
+}
+
+.sidebar p {
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Основная часть */
+.main-content {
+    width: 65%;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.name-and-title {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.name-and-title h1 {
+    font-size: 36px;
+    margin: 0;
+    color: #2c2c2c;
+}
+
+.name-and-title p {
+    font-size: 18px;
+    color: #ffcc99;
+    font-weight: bold;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2c2c2c;
+    border-bottom: 2px solid #ffcc99;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+ul li strong {
+    font-weight: bold;
+    display: block;
+    font-size: 18px;
+}
+
+ul li p {
+    margin: 5px 0 0;
+    line-height: 1.6;
+    color: #555;
+}
