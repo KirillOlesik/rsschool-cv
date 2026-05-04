@@ -162,10 +162,10 @@ function renderProjects() {
     list.forEach((p, index) => {
         const row = document.createElement("tr")
         row.innerHTML = `
-            <td>${p.name}</td>
-            <td>${p.company}</td>
-            <td>$${p.budget}</td>
-            <td>${p.capacity}</td>
+            <td>${p.company || ""}</td>
+            <td>${p.name || ""}</td>
+            <td>${p.budget || "0"}</td>
+            <td>${p.capacity || "0"}</td>
             <td>-</td>
             <td>$0.00</td>
             <td>
@@ -218,9 +218,9 @@ function renderEmployees() {
             <td>${e.dob}</td>
             <td class="editable-cell editable-position">${e.position}</td>
             <td class="editable-cell editable-salary">${e.salary}</td>
-            <td>$${e.salary/2}</td>
+            <td>${e.salary/2}</td>
             <td>-</td>
-            <td class="minus"> $${e.salary/2}</td>
+            <td class="minus"> ${e.salary/2}</td>
             <td>
                 <button class="delete-emp-btn" data-id="${index}">Delete</button>
             </td>
@@ -317,3 +317,151 @@ function makeEditable(td, field, id) {
 }
 renderProjects()
 renderEmployees()
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    const projectSortHeaders = document.querySelectorAll("#projects-table th[data-sort]");
+    projectSortHeaders.forEach(header => {
+        header.style.cursor = "pointer";
+        header.addEventListener("click", function() {
+            const sortKey = this.getAttribute("data-sort");
+            sortProjects(sortKey);
+        });
+    });
+
+    const employeeSortHeaders = document.querySelectorAll("#employees-table th[data-sort]");
+    employeeSortHeaders.forEach(header => {
+        header.style.cursor = "pointer";
+        header.addEventListener("click", function() {
+            const sortKey = this.getAttribute("data-sort");
+            sortEmployees(sortKey);
+        });
+    });
+});
+
+let projectSortState = { key: null, dir: 1 };
+let employeeSortState = { key: null, dir: 1 };
+
+function sortProjects(key) {
+    const projects = getCurrentProjects();
+
+    if (projectSortState.key === key) {
+        projectSortState.dir = -projectSortState.dir;
+    } else {
+        projectSortState.dir = 1;
+        projectSortState.key = key;
+    }
+    
+    projects.sort((a, b) => {
+        let valA, valB;
+
+        if (key === "company") {
+            valA = a.company || "";
+            valB = b.company || "";
+        } else if (key === "projectName" || key === "name") {
+            valA = a.name || "";
+            valB = b.name || "";
+        } else if (key === "budget") {
+            valA = parseFloat(a.budget) || 0;
+            valB = parseFloat(b.budget) || 0;
+        } else if (key === "employeeCapacity") {
+            valA = parseFloat(a.capacity) || 0;
+            valB = parseFloat(b.capacity) || 0;
+        } else if (key === "estimatedIncome") {
+            valA = 0; // Пока что 0
+            valB = 0;
+        } else {
+            valA = a[key] || "";
+            valB = b[key] || "";
+        }
+        if (typeof valA === "number" && typeof valB === "number") {
+            return (valA - valB) * projectSortState.dir;
+        } else {
+            const strA = String(valA).toLowerCase();
+            const strB = String(valB).toLowerCase();
+            if (strA < strB) return -1 * projectSortState.dir;
+            if (strA > strB) return 1 * projectSortState.dir;
+            return 0;
+        }
+    });
+    
+    saveProjects();
+    renderProjects();
+    updateSortIndicators("#projects-table", projectSortState);
+}
+
+function sortEmployees(key) {
+    const employees = getCurrentEmployees();
+    
+    // Определяем направление сортировки
+    if (employeeSortState.key === key) {
+        employeeSortState.dir = -employeeSortState.dir;
+    } else {
+        employeeSortState.dir = 1;
+        employeeSortState.key = key;
+    }
+    
+    employees.sort((a, b) => {
+        let valA, valB;
+        if (key === "name") {
+            valA = a.name || "";
+            valB = b.name || "";
+        } else if (key === "surname") {
+            valA = a.surname || "";
+            valB = b.surname || "";
+        } else if (key === "age") {
+
+            const ageA = a.dob ? Math.floor((Date.now() - Date.parse(a.dob)) / 31557600000) : 0;
+            const ageB = b.dob ? Math.floor((Date.now() - Date.parse(b.dob)) / 31557600000) : 0;
+            valA = ageA;
+            valB = ageB;
+        } else if (key === "position") {
+            valA = a.position || "";
+            valB = b.position || "";
+        } else if (key === "salary") {
+            valA = parseFloat(a.salary) || 0;
+            valB = parseFloat(b.salary) || 0;
+        } else if (key === "estimatedPayment") {
+            valA = (parseFloat(a.salary) || 0) / 2;
+            valB = (parseFloat(b.salary) || 0) / 2;
+        } else if (key === "projectedIncome") {
+            valA = (parseFloat(a.salary) || 0) / 2;
+            valB = (parseFloat(b.salary) || 0) / 2;
+        } else {
+            valA = a[key] || "";
+            valB = b[key] || "";
+        }
+
+        if (typeof valA === "number" && typeof valB === "number") {
+            return (valA - valB) * employeeSortState.dir;
+        } else {
+            const strA = String(valA).toLowerCase();
+            const strB = String(valB).toLowerCase();
+            if (strA < strB) return -1 * employeeSortState.dir;
+            if (strA > strB) return 1 * employeeSortState.dir;
+            return 0;
+        }
+    });
+    
+    saveEmployees();
+    renderEmployees();
+    updateSortIndicators("#employees-table", employeeSortState);
+}
+
+function updateSortIndicators(tableSelector, state) {
+    const table = document.querySelector(tableSelector);
+    if (!table) return;
+
+    table.querySelectorAll("th[data-sort]").forEach(th => {
+        th.classList.remove("sorted-asc", "sorted-desc");
+        const icon = th.querySelector(".sort-icon");
+        if (icon) icon.textContent = "⇅";
+    });
+
+    const currentTh = table.querySelector(`th[data-sort="${state.key}"]`);
+    if (currentTh) {
+        currentTh.classList.add(state.dir === 1 ? "sorted-asc" : "sorted-desc");
+        const icon = currentTh.querySelector(".sort-icon");
+        if (icon) icon.textContent = state.dir === 1 ? "↑" : "↓";
+    }
+}

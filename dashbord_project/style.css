@@ -243,3 +243,6 @@ form label {
     margin-top: 2px;
     padding-left: 2px;
 }
+th.sorted-asc  { background-color: #e8f4fd; }
+th.sorted-desc { background-color: #fde8e8; }
+.sort-icon { font-size: 0.8em; margin-left: 4px; opacity: 0.6; }
