@@ -37,7 +37,7 @@ const factorial = (function() {
 })();
 
 console.log(factorial(5));  
-}
+
 ```
 # Education 
 * Rs School
