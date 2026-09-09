@@ -9,7 +9,7 @@
 # About me
 
 *I'm a beginner front-end developer with an interest in full-stack development.
-I'm studying and working as a programmer at university. I'm passionate about 
+I'm studying and working as a programmer at university. I'm passionate about
 creating web applications and am constantly developing my skills. I'm open to
 new projects and collaboration opportunities.*
 
@@ -17,7 +17,7 @@ new projects and collaboration opportunities.*
 
 + JavaScript
 + Postgresql
-+ React 
++ React
 + Node
 + HTML
 + CSS
@@ -36,10 +36,10 @@ const factorial = (function() {
     };
 })();
 
-console.log(factorial(5));  
+console.log(factorial(5));
 
 ```
-# Education 
+# Education
 * Rs School
     + Js
 * Polessu

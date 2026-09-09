@@ -2,49 +2,49 @@
 * [33m0827311[m feat: create index.html and style.css
 [31m|[m * [33mea9cb66[m[33m ([m[1;31morigin/dashboard_project[m[33m, [m[1;32mdashboard_project[m[33m)[m redeploy github pages
 [31m|[m [32m|[m *   [33m75fe16c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mgh-pages[m[33m, [m[1;31morigin/gh-pages[m[33m)[m Merge pull request #10 from KirillOlesik/dashboard_project
-[31m|[m [32m|[m [33m|[m[32m\[m  
-[31m|[m [32m|[m [33m|[m[32m/[m  
-[31m|[m [32m|[m[32m/[m[33m|[m   
+[31m|[m [32m|[m [33m|[m[32m\[m
+[31m|[m [32m|[m [33m|[m[32m/[m
+[31m|[m [32m|[m[32m/[m[33m|[m
 [31m|[m * [33m|[m [33mafa5b1e[m redeploy github pages
 [31m|[m * [33m|[m [33m82e3ef1[m docs: make data-sort
 [31m|[m * [33m|[m   [33m3ac82a5[m Merge branch 'main' into dashboard_project
-[31m|[m [35m|[m[31m\[m [33m\[m  
-[31m|[m [35m|[m[31m/[m [33m/[m  
-[31m|[m[31m/[m[35m|[m [33m|[m   
+[31m|[m [35m|[m[31m\[m [33m\[m
+[31m|[m [35m|[m[31m/[m [33m/[m
+[31m|[m[31m/[m[35m|[m [33m|[m
 * [35m|[m [33m|[m [33m0ad7956[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m docs: edit readme main
 [36m|[m [35m|[m *   [33m71c92d4[m Merge pull request #8 from KirillOlesik/dashboard_project
-[36m|[m [35m|[m [1;31m|[m[35m\[m  
-[36m|[m [35m|[m [1;31m|[m[35m/[m  
-[36m|[m [35m|[m[35m/[m[1;31m|[m   
+[36m|[m [35m|[m [1;31m|[m[35m\[m
+[36m|[m [35m|[m [1;31m|[m[35m/[m
+[36m|[m [35m|[m[35m/[m[1;31m|[m
 [36m|[m * [1;31m|[m [33mf7117c0[m docs: refresh git  project
 [36m|[m * [1;31m|[m [33md28aff1[m docs: create and start project
 [36m|[m [1;32m|[m *   [33m9286014[m Merge pull request #6 from KirillOlesik/rsschool-cv-html
-[36m|[m [1;32m|[m [1;33m|[m[1;32m\[m  
-[36m|[m [1;32m|[m [1;33m|[m[1;32m/[m  
-[36m|[m [1;32m|[m[1;32m/[m[1;33m|[m   
+[36m|[m [1;32m|[m [1;33m|[m[1;32m\[m
+[36m|[m [1;32m|[m [1;33m|[m[1;32m/[m
+[36m|[m [1;32m|[m[1;32m/[m[1;33m|[m
 [36m|[m * [1;33m|[m [33m218dc0b[m[33m ([m[1;31morigin/rsschool-cv-html[m[33m, [m[1;32mrsschool-cv-html[m[33m)[m docs: edits index html
 [36m|[m [1;34m|[m *   [33me0dc8aa[m Merge pull request #4 from KirillOlesik/rsschool-cv-html
-[36m|[m [1;34m|[m [1;35m|[m[1;34m\[m  
-[36m|[m [1;34m|[m [1;35m|[m[1;34m/[m  
-[36m|[m [1;34m|[m[1;34m/[m[1;35m|[m   
+[36m|[m [1;34m|[m [1;35m|[m[1;34m\[m
+[36m|[m [1;34m|[m [1;35m|[m[1;34m/[m
+[36m|[m [1;34m|[m[1;34m/[m[1;35m|[m
 [36m|[m * [1;35m|[m [33m68e18a2[m docs: edit index html
 [36m|[m * [1;35m|[m [33m2dd9431[m docsx: add photo files
 [36m|[m [1;36m|[m *   [33m5a400ee[m Merge pull request #3 from KirillOlesik/rsschool-cv-html
-[36m|[m [1;36m|[m [31m|[m[1;36m\[m  
-[36m|[m [1;36m|[m [31m|[m[1;36m/[m  
-[36m|[m [1;36m|[m[1;36m/[m[31m|[m   
+[36m|[m [1;36m|[m [31m|[m[1;36m\[m
+[36m|[m [1;36m|[m [31m|[m[1;36m/[m
+[36m|[m [1;36m|[m[1;36m/[m[31m|[m
 [36m|[m * [31m|[m [33mafb1867[m fix: fix index html code
 [36m|[m [32m|[m *   [33m2eb912d[m Merge pull request #2 from KirillOlesik/rsschool-cv-html
-[36m|[m [32m|[m [33m|[m[32m\[m  
-[36m|[m [32m|[m [33m|[m[32m/[m  
-[36m|[m [32m|[m[32m/[m[33m|[m   
+[36m|[m [32m|[m [33m|[m[32m\[m
+[36m|[m [32m|[m [33m|[m[32m/[m
+[36m|[m [32m|[m[32m/[m[33m|[m
 [36m|[m * [33m|[m [33m6f23dd9[m fix: link readme file
 [36m|[m * [33m|[m [33mf71db22[m docs: add empty template in  html file
 [36m|[m * [33m|[m [33m7934c3f[m feat: add css file
 [36m|[m * [33m|[m [33mf40a1d0[m feat: add html file
-[36m|[m [33m|[m[33m/[m  
+[36m|[m [33m|[m[33m/[m
 [36m|[m * [33m771b7f0[m docs: add http in readme.md
 [36m|[m * [33m28da4db[m docs: add information about myself in  cv file
 [36m|[m * [33mdfa4cb2[m docs: create cv file
-[36m|[m[36m/[m  
+[36m|[m[36m/[m
 * [33mc7fea8e[m Initial commit
